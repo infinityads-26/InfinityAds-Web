@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Infinity Ads | Performance Based Digital Marketing Agency</title>
+    <meta name="description" content="We helps brands scale with performance marketing, affiliate partnerships, paid advertising, and data-driven customer acquisition strategies.">
+    <meta name="keywords" content="digital marketing agency, media buying, Meta ads, Google ads, TikTok ads, SEO, PPC, ROAS, performance marketing, growth agency">
+    <meta name="author" content="Infinity Ads">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://infinityads.net/home">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://infinityads.net/home">
+    <meta property="og:title" content="Infinity Ads | Performance Based Digital Marketing Agency">
+    <meta property="og:description" content="We helps brands scale with performance marketing, affiliate partnerships, paid advertising, and data-driven customer acquisition strategies.">
+    <meta property="og:image" content="https://infinityads.net/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://infinityads.net/home">
+    <meta property="twitter:title" content="Infinity Ads | Performance Based Digital Marketing Agency">
+    <meta property="twitter:description" content="We helps brands scale with performance marketing, affiliate partnerships, paid advertising, and data-driven customer acquisition strategies.">
+    <meta property="twitter:image" content="https://infinityads.net/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#05070A',
+                            800: '#0F131A',
+                            700: '#1A1F26',
+                        },
+                        brand: {
+                            blue: '#1D4ED8',
+                            gold: '#D97706',
+                            grey: '#4B5563',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-glow': 'radial-gradient(circle at 50% 0%, rgba(29, 78, 216, 0.15) 0%, rgba(5, 7, 10, 0) 70%)',
+                        'gradient-text': 'linear-gradient(to right, #3B82F6, #D97706)',
+                        'card-gradient': 'linear-gradient(145deg, rgba(26, 31, 38, 0.6), rgba(26, 31, 38, 0.3))',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(29, 78, 216, 0.4);
+        }
+
+        .video-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .video-bg-container video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(5, 7, 10, 0.4) 0%, rgba(5, 7, 10, 0.7) 100%);
+            z-index: 1;
+        }
+
+        input[type=range] {
+            accent-color: #1D4ED8;
+        }
+
+        @media (max-width: 380px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.1;
+            }
+        }
+
+        /* FAQ Transition Utilities */
+        .faq-content {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-item.active .faq-content {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 2rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: rgba(29, 78, 216, 0.2);
+            color: #1D4ED8;
+        }
+        .faq-item.active .faq-trigger span {
+            color: #1D4ED8;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-dark-900 text-white font-sans antialiased overflow-x-hidden selection:bg-brand-blue selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/5">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <a href="/home" class="flex items-center gap-3 group">
+                <img src="/images/logo.png" alt="Infinity Ads Logo" class="h-12 sm:h-14 md:h-16">
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-400">
+                <a href="/services" class="hover:text-white transition-colors">Services</a>
+                <a href="/about" class="hover:text-white transition-colors">About</a>
+                <a href="/our-team" class="hover:text-white transition-colors">Team</a>
+                <a href="/contact"
+                    class="px-6 py-2.5 rounded-full bg-brand-blue text-white font-bold hover:bg-blue-600 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand-blue/20">
+                    Let's Talk
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-7 h-7 sm:w-8 sm:h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-dark-900/98 backdrop-blur-2xl transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xs font-black uppercase tracking-[0.3em] text-gray-500">Menu</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-white p-2 glass rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="flex flex-col space-y-6">
+                <a href="/home" class="text-4xl font-heading font-black text-white hover:text-brand-blue transition-colors">Home</a>
+                <a href="/services" class="text-4xl font-heading font-black text-white hover:text-brand-blue transition-colors">Services</a>
+                <a href="/about" class="text-4xl font-heading font-black text-white hover:text-brand-blue transition-colors">About</a>
+                <a href="/our-team" class="text-4xl font-heading font-black text-white hover:text-brand-blue transition-colors">Team</a>
+                <a href="/contact" class="text-4xl font-heading font-black text-brand-gold hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div class="mt-auto pt-12 border-t border-white/5">
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-600 mb-4">Secure Connection Active</p>
+                <div class="flex gap-4">
+                    <div class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></div>
+                    <div class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative min-h-[70vh] sm:min-h-screen lg:min-h-[90vh] xl:min-h-screen flex items-center justify-center overflow-hidden pt-12 sm:pt-20">
+        <div class="video-bg-container">
+            <video autoplay muted loop playsinline poster="">
+                <source src="/images/hero-bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="container mx-auto max-w-6xl text-center relative z-10 px-4 sm:px-6 py-8 sm:py-12">
+
+            <h1
+                class="hero-title text-4xl sm:text-6xl md:text-7xl md:text-[5rem] font-heading font-extrabold leading-[1.1] tracking-tight mb-6 sm:mb-8">
+                Scale Smarter. Grow Faster. <br class="hidden sm:block">
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-gold text-glow">With
+                    Infinity Ads.</span>
+            </h1>
+
+            <p
+                class="text-base sm:text-lg md:text-xl lg:text-[1rem] text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2">
+                Infinity Ads is a results-driven digital marketing agency focused on <span class="text-white font-semibold">
+                Meta Ads, Google Ads, TikTok Ads, SEO</span>, and precision media buying. We help brands scale faster by turning traffic into qualified leads, sales and real revenue.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
+                <a href="/services"
+                    class="w-full sm:w-auto px-8 py-4 bg-white text-dark-900 font-heading font-bold text-base sm:text-lg rounded-xl hover:scale-105 transition-transform shadow-xl">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agency Introduction Section -->
+    <section class="py-10 px-4 sm:px-6 relative bg-dark-900 overflow-hidden">
+        <!-- Subtle Background Accent -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="container mx-auto max-w-6xl relative z-10 px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-20 items-center">
+                
+                <!-- LEFT COLUMN (Desktop) / PARTS 1 & 3 (Mobile) -->
+                <div class="space-y-8 text-center lg:text-left">
+                    <!-- 1. Heading Block (Order 1 on Mobile) -->
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-widest mb-2">
+                            Who We Are
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-heading font-bold leading-tight">
+                            The Future of <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-gold text-glow">Performance Marketing.</span>
+                        </h2>
+                        <div class="w-20 h-1.5 bg-brand-gold mx-auto lg:mx-0 rounded-full"></div>
+                    </div>
+
+                    <!-- 2. Image Block (VISIBLE ONLY ON MOBILE IN THIS POSITION - Order 2) -->
+                    <div class="lg:hidden relative group w-full py-4">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-brand-blue/20 to-brand-gold/20 rounded-[40px] blur-2xl opacity-50"></div>
+                        <div class="glass p-2 rounded-[40px] overflow-hidden relative shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2940" alt="Infinity Ads Intelligence" class="rounded-[38px] grayscale w-full h-auto object-cover aspect-[4/3]">
+                        </div>
+                    </div>
+
+                    <!-- 3. Description Block (Order 3 on Mobile) -->
+                    <div class="space-y-8">
+                        <p class="text-left text-gray-300 text-lg sm:text-xl leading-relaxed font-medium">
+                            At <span class="text-white font-bold underline decoration-brand-blue decoration-2 underline-offset-4">Infinity Ads</span>, we turn attention into revenue.
+                        </p>
+
+                        <p class="text-left text-gray-500 text-base sm:text-lg leading-relaxed">
+                            Through strategic high-performance campaigns across Meta, Google, and TikTok and SEO we build scalable growth systems designed for measurable ROI.
+                        </p>
+
+                        <p class="text-left text-gray-300 text-lg sm:text-xl leading-relaxed font-medium">
+                            Performance marketing powered by data, driven by results.
+                        </p>
+
+                        <p class="text-left text-gray-500 text-base sm:text-lg leading-relaxed">
+                            Infinity Ads helps brands dominate, media buying, paid ads and SEO turn clicks into consistent revenue.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                            <div class="space-y-1">
+                                <h4 class="text-white font-bold text-3xl font-heading tracking-tighter">80M+</h4>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Ad Spend Managed</p>
+                            </div>
+                            <div class="w-px h-12 bg-white/10 hidden sm:block"></div>
+                            <div class="space-y-1">
+                                <h4 class="text-white font-bold text-3xl font-heading tracking-tighter">4X Average</h4>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Client ROAS</p>
+                            </div>
+                            <div class="w-px h-12 bg-white/10 hidden sm:block"></div>
+                            <div class="space-y-1">
+                                <h4 class="text-white font-bold text-3xl font-heading tracking-tighter">100%</h4>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Performance Clarity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (Desktop ONLY) -->
+                <div class="hidden lg:block relative group w-full">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-brand-blue/20 to-brand-gold/20 rounded-[40px] blur-2xl opacity-50 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div class="glass p-2 rounded-[40px] overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2940" alt="Infinity Ads Intelligence" class="rounded-[38px] grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto object-cover lg:aspect-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 glass p-6 rounded-3xl border border-brand-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                        <p class="text-brand-gold font-black text-xs uppercase tracking-tighter mb-1">Scale Specialist</p>
+                        <p class="text-white text-3xl font-heading font-black tracking-tighter">Infinity ROI</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="py-16 sm:py-10 px-4 sm:px-6 bg-dark-800" id="services">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-12 sm:mb-16 space-y-4">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white">What we are good to...
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">Platform-specific strategies designed to
+                    capture and convert your audience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Facebook Meta -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-blue group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">Meta Ads</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Performance-driven Facebook & Instagram
+                        campaigns built to scale with high-converting creative.</p>
+                </div>
+
+                <!-- Google Ads -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-gold group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">Google Ads</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Search, YouTube & Demand Gen campaigns
+                        capturing high-intent buyers at the perfect moment.</p>
+                </div>
+
+                <!-- TikTok -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 sm:mb-6 text-white group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19.589 6.686a4.793 4.793 0 0 1-3.77-1.879v8.336a6.48 6.48 0 1 1-5.607-6.424v3.37a3.11 3.11 0 1 0 2.19 2.973V0h3.417a4.793 4.793 0 0 0 3.77 4.686v2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">TikTok Ads</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">UGC-powered creative strategies designed
+                        for viral reach and rapid growth.</p>
+                </div>
+
+                <!-- Media Buying -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-blue group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">Media Buying</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Data-led programmatic and native
+                        advertising to expand reach across the open web.</p>
+                </div>
+
+                <!-- Affiliate Marketing -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-blue group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">Affiliate Marketing</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">High-conversion affiliate ecosystems
+                        and partner network scaling to maximize revenue.</p>
+                </div>
+
+                <!-- PPC -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-blue group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">PPC</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Targeted pay-per-click campaigns
+                        delivering fast, measurable results.</p>
+                </div>
+
+                <!-- Snapchat Ads -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-gold group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M15.943 11.526c-.111-.303-.323-.465-.564-.599a1 1 0 0 0-.123-.064l-.219-.111c-.752-.399-1.339-.902-1.746-1.498a3.4 3.4 0 0 1-.3-.531c-.034-.1-.032-.156-.008-.207a.3.3 0 0 1 .097-.1c.129-.086.262-.173.352-.231.162-.104.289-.187.371-.245.309-.216.525-.446.66-.702a1.4 1.4 0 0 0 .069-1.16c-.205-.538-.713-.872-1.329-.872a1.8 1.8 0 0 0-.487.065c.006-.368-.002-.757-.035-1.139-.116-1.344-.587-2.048-1.077-2.61a4.3 4.3 0 0 0-1.095-.881C9.764.216 8.92 0 7.999 0s-1.76.216-2.505.641c-.412.232-.782.53-1.097.883-.49.562-.96 1.267-1.077 2.61-.033.382-.04.772-.036 1.138a1.8 1.8 0 0 0-.487-.065c-.615 0-1.124.335-1.328.873a1.4 1.4 0 0 0 .067 1.161c.136.256.352.486.66.701.082.058.21.14.371.246l.339.221a.4.4 0 0 1 .109.11c.026.053.027.11-.012.217a3.4 3.4 0 0 1-.295.52c-.398.583-.968 1.077-1.696 1.472-.385.204-.786.34-.955.8-.128.348-.044.743.28 1.075q.18.189.409.31a4.4 4.4 0 0 0 1 .4.7.7 0 0 1 .202.09c.118.104.102.26.259.488q.12.178.296.3c.33.229.701.243 1.095.258.355.014.758.03 1.217.18.19.064.389.186.618.328.55.338 1.305.802 2.566.802 1.262 0 2.02-.466 2.576-.806.227-.14.424-.26.609-.321.46-.152.863-.168 1.218-.181.393-.015.764-.03 1.095-.258a1.14 1.14 0 0 0 .336-.368c.114-.192.11-.327.217-.42a.6.6 0 0 1 .19-.087 4.5 4.5 0 0 0 1.014-.404c.16-.087.306-.2.429-.336l.004-.005c.304-.325.38-.709.256-1.047" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">Snapchat Ads</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Engaging story ads and AR experiences
+                        that connect with younger audiences.</p>
+                </div>
+
+                <!-- SEO -->
+                <div
+                    class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/[0.04] transition-all duration-300 group hover:-translate-y-2 border border-white/5">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center mb-4 sm:mb-6 text-brand-gold group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-heading font-bold mb-2 sm:mb-3">SEO</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">Sustainable organic growth powered by
+                        technical SEO and authority-building content.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Problem Solvers CTA Section -->
+    <section class="py-16 sm:py-10 px-4 sm:px-6">
+        <div class="container mx-auto max-w-7xl">
+            <div
+                class="bg-gradient-to-br from-brand-blue via-indigo-950 to-brand-gold/40 rounded-[2rem] sm:rounded-[4rem] p-8 sm:p-16 md:p-24 overflow-hidden relative shadow-2xl border border-white/5">
+                <!-- Top Row -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start mb-16 sm:mb-10 relative z-10">
+                    <div class="space-y-6">
+                        <h2
+                            class="text-3xl sm:text-5xl md:text-6xl font-heading font-black text-white leading-[1.1] tracking-tighter">
+                            We’re not just marketers - we’re problem solvers, strategists, and data nerds.
+                        </h2>
+                    </div>
+                    <div class="space-y-8">
+                        <p class="text-white/90 text-base sm:text-xl leading-relaxed font-medium">
+                            Infinity Ads is a performance-driven digital agency with a strong focus on technical mastery. We help ambitious brands grow through smart SEO, engaging content, precision PPC, and insight-led strategy. Our team blends analytical thinking with creative execution to deliver measurable results - no fluff, just focused work that makes a difference.
+                        </p>
+                        <a href="/contact"
+                            class="inline-block px-10 py-5 bg-white text-brand-blue font-heading font-bold text-lg rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-xl">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Decorative Elements -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+                <div
+                    class="absolute bottom-0 left-0 w-96 h-96 bg-brand-gold/20 rounded-full blur-[100px] -ml-48 -mb-48">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Growth Framework Section -->
+    <section class="py-16 sm:py-10 px-4 sm:px-6 bg-dark-800/30">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+
+                <!-- Left: Heading Box -->
+                <div class="md:col-span-5 lg:col-span-4 flex">
+                    <div
+                        class="glass p-8 sm:p-12 rounded-[2rem] sm:rounded-[3rem] border border-brand-blue/20 bg-gradient-to-br from-brand-blue/10 to-transparent flex flex-col justify-center text-center md:text-left w-full">
+                        <h2
+                            class="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white leading-tight mb-6">
+                            The <span class="text-brand-blue">3-Step</span> Performance Growth Blueprint
+                        </h2>
+                        <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+                            A precision-optimized system that converts attention into measurable revenue with consistency and control.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Middle: Steps 1 & 2 -->
+                <div class="md:col-span-7 lg:col-span-4 space-y-6 sm:gap-8">
+                    <!-- Step 1 -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border border-brand-blue/10 bg-gradient-to-br from-brand-blue/5 to-transparent hover:border-brand-blue/30 transition-all group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="12" x2="20" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Attract</h3>
+                        <p class="text-gray-500 text-sm sm:text-base leading-relaxed">
+                            We identify, target, and capture high-intent audiences using data-driven media buying and creative strategy. Every campaign is engineered to bring qualified traffic - not just clicks - into your ecosystem.
+                        </p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border border-brand-gold/10 bg-gradient-to-br from-brand-gold/5 to-transparent hover:border-brand-gold/30 transition-all group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M3 5h18l-7 8v5l-4 2v-7L3 5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Convert</h3>
+                        <p class="text-gray-500 text-sm sm:text-base leading-relaxed">
+                            Traffic means nothing without conversion. We optimize landing pages, messaging, offers, and tracking to turn visitors into customers at the highest possible rate.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Step 3 (Centered/Staggered) -->
+                <div class="lg:col-span-4 flex items-center">
+                    <div
+                        class="glass p-8 rounded-[2rem] border border-brand-blue/10 bg-gradient-to-br from-brand-blue/5 to-transparent hover:border-brand-blue/30 transition-all group w-full">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M4 16l6-6 4 4 6-8"></path>
+                                <path d="M14 6h6v6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Scale</h3>
+                        <p class="text-gray-500 text-sm sm:text-base leading-relaxed">
+                            Once profitable, we scale strategically. Using advanced bidding, audience expansion, and budget optimization, we grow revenue while protecting ROI.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 sm:py-10 px-4 sm:px-6 overflow-hidden">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-20 items-center">
+                <div class="space-y-8 sm:space-y-12">
+                    <div class="space-y-4">
+                        <span class="text-brand-blue font-bold tracking-[0.3em] uppercase text-xs sm:text-sm"></span>
+                        <h2 class="text-3xl sm:text-5xl md:text-6xl font-heading font-black text-white leading-tight">
+                            Why Choose Infinity Ads?</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-blue transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-blue group-hover:scale-150 transition-transform"></span>
+                                🚀 ROI-First Strategy
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-blue transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-blue group-hover:scale-150 transition-transform"></span>
+                                📊 Data-Driven Decisions
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-blue transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-blue group-hover:scale-150 transition-transform"></span>
+                                🎯 Precision Targeting
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-blue transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-blue group-hover:scale-150 transition-transform"></span>
+                                🧠 Conversion Engineering
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-blue transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-blue group-hover:scale-150 transition-transform"></span>
+                                📈 Scalable Growth Systems
+                            </li>
+                        </ul>
+                        <!-- <ul class="space-y-4">
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-gold transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                                6. Innovation & Trends
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-gold transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                                7. High-Performing Campaigns
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-gold transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                                8. Proactive & Agile
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-gold transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                                9. Client-Centric Philosophy
+                            </li>
+                            <li
+                                class="flex items-center gap-3 text-gray-300 font-bold text-sm sm:text-base hover:text-brand-gold transition-colors group">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                                10. Transparent Reporting
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-10 bg-brand-blue/10 rounded-full blur-[120px]"></div>
+                    <div class="glass p-2 rounded-[2rem] sm:rounded-[3rem] overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000"
+                            alt="Why Choose Infinity Ads"
+                            class="w-full h-auto rounded-[1.5rem] sm:rounded-[2.5rem] grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 8: FAQ (Neural Knowledge Retrieval) -->
+    <section class="py-16 sm:py-16 relative overflow-hidden bg-dark-900 border-t border-white/5">
+        <!-- Background Elements -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute -right-20 top-40 w-96 h-96 bg-brand-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+            <div class="text-center mb-16 sm:mb-20">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 group hover:border-brand-blue/30 transition-all duration-300">
+                    <span class="w-2 h-2 rounded-full bg-brand-blue shadow-[0_0_10px_rgba(29,78,216,0.8)]"></span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">Knowledge Base</span>
+                </div>
+                <h2 class="text-4xl sm:text-6xl font-heading font-black text-white mb-6 tracking-tight">
+                    Frequently Asked <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-gold">Questions</span>
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
+                    Clear answers to the most common inquiries regarding our growth protocols and operational framework.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4">
+                        <span class="text-white font-heading font-bold text-lg sm:text-xl transition-colors">What services does Infinity Ads provide?</span>
+                        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 faq-icon shrink-0 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 sm:px-8 pb-8" style="display: none;">
+                        <div class="text-gray-400 text-sm sm:text-base leading-relaxed border-t border-white/5 pt-6">
+                            Infinity Ads specializes in performance marketing including Meta Ads, Google Ads, TikTok Ads, PPC, Paid Social, Media Buying, Snapchat Ads, and SEO. We focus on building scalable systems that drive measurable revenue growth.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4">
+                        <span class="text-white font-heading font-bold text-lg sm:text-xl transition-colors">How do you measure campaign success?</span>
+                        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 faq-icon shrink-0 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 sm:px-8 pb-8" style="display: none;">
+                        <div class="text-gray-400 text-sm sm:text-base leading-relaxed border-t border-white/5 pt-6">
+                            We measure success based on real business metrics — ROI, ROAS, cost per acquisition (CPA), conversion rate, and revenue growth. We prioritize profitability over vanity metrics like impressions or clicks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4">
+                        <span class="text-white font-heading font-bold text-lg sm:text-xl transition-colors">How long does it take to see results?</span>
+                        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 faq-icon shrink-0 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 sm:px-8 pb-8" style="display: none;">
+                        <div class="text-gray-400 text-sm sm:text-base leading-relaxed border-t border-white/5 pt-6">
+                            Paid advertising campaigns can start generating data within days. However, optimized and scalable results typically take 4–8 weeks depending on your industry, budget, and offer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4">
+                        <span class="text-white font-heading font-bold text-lg sm:text-xl transition-colors">What industries do you work with?</span>
+                        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 faq-icon shrink-0 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 sm:px-8 pb-8" style="display: none;">
+                        <div class="text-gray-400 text-sm sm:text-base leading-relaxed border-t border-white/5 pt-6">
+                            We work with eCommerce brands, lead generation businesses, service providers, startups, and scaling companies looking for predictable growth through paid advertising.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4">
+                        <span class="text-white font-heading font-bold text-lg sm:text-xl transition-colors">Do you offer custom strategies?</span>
+                        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 faq-icon shrink-0 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 sm:px-8 pb-8" style="display: none;">
+                        <div class="text-gray-400 text-sm sm:text-base leading-relaxed border-t border-white/5 pt-6">
+                            Yes. Every business is different. We create tailored growth strategies based on your goals, target audience, competition, and budget.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Creative Footer: Infinity Systems -->
+    <footer class="bg-[#000000] pt-12 pb-12 relative overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-brand-blue/5 blur-[120px] pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-14">
+                
+                <!-- Column 1: Brand Intelligence (4 cols) -->
+                <div class="md:col-span-4 space-y-8">
+                    <a href="/home" class="inline-block group">
+                        <img src="/images/logo.png" alt="Infinity Ads Logo" class="h-16 group-hover:drop-shadow-[0_0_15px_rgba(29,78,216,0.5)] transition-all">
+                    </a>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-sm">
+                        Architecting the future of performance marketing through technical mastery and data-driven scaling.
+                    </p>
+                    <!-- Status Dashboard -->
+                    <div class="flex items-center gap-6 pt-4">
+                        <div class="flex items-center gap-2">
+                            <!-- <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> -->
+                            <span class="text-[10px] font-black uppercase tracking-widest text-emerald-500/80"></span>
+                        </div>
+                        <!-- <div class="w-px h-4 bg-white/10"></div> -->
+                        <!-- <div class="text-[10px] font-black uppercase tracking-widest text-gray-500">Next Epoch: 2026</div> -->
+                    </div>
+                </div>
+
+                <!-- Column 2: Core Units (2 cols) -->
+                <div class="md:col-span-2 space-y-8">
+                    <h4 class="text-white font-black text-xs uppercase tracking-[0.3em]">Our Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-blue transition-colors text-sm font-bold">Meta Ads</a></li>
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-blue transition-colors text-sm font-bold">Google Ads</a></li>
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-blue transition-colors text-sm font-bold">TikTok Ads</a></li>
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-blue transition-colors text-sm font-bold">Media Buying</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Firm Intel (2 cols) -->
+                <div class="md:col-span-2 space-y-12">
+                    <h4 class="text-white font-black text-xs uppercase tracking-[0.3em]"></h4>
+                    <ul class="space-y-4">
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-gold transition-colors text-sm font-bold">Affiliate Marketing</a></li>
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-gold transition-colors text-sm font-bold">PPC</a></li>
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-gold transition-colors text-sm font-bold">Snapchat Ads</a></li>
+                        <li><a href="/services" class="text-gray-500 hover:text-brand-gold transition-colors text-sm font-bold">SEO Mastery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter  (4 cols) -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-white font-black text-xs uppercase tracking-[0.3em]">Newsletter </h4>
+                    <p class="text-gray-500 text-xs font-bold leading-relaxed">Stay connected with us.</p>
+                    
+                    <!-- Glass Newsletter -->
+                    <form class="relative group">
+                        <input type="email" placeholder="Enter secure email..." class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-sm focus:outline-none focus:border-brand-blue/50 focus:bg-white/10 transition-all">
+                        <button class="absolute right-2 top-2 bottom-2 px-4 bg-brand-blue text-white rounded-lg text-xs font-bold hover:bg-blue-600 transition-all">Join</button>
+                    </form>
+
+                    <!-- Social Nodes -->
+                    <div class="flex items-center gap-4 pt-4">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/infinityads.net/" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:text-[#1877F2] hover:bg-[#1877F2]/10 hover:shadow-[0_0_15px_rgba(24,119,242,0.3)] transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/infinityaads/" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:bg-[#E4405F]/10 hover:shadow-[0_0_15px_rgba(228,64,95,0.3)] transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.058 1.633.269 2.137.773.504.504.715.771.773 2.137.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.058 1.366-.269 1.633-.773 2.137-.504.504-.771.715-2.137.773-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.058-1.633-.269-2.137-.773-.504-.504-.715-.771-.773-2.137-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.058-1.366.269-1.633.773-2.137.504-.504.771-.715 2.137-.773 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.06-6.78 2.479-6.838 6.838-.058 1.281-.072 1.688-.072 4.947s.014 3.667.072 4.947c.058 4.358 2.477 6.78 6.838 6.838 1.281.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.357-.06 6.777-2.478 6.835-6.838.058-1.281.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-4.359-2.478-6.78-6.835-6.838-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:shadow-[0_0_15px_rgba(0,119,181,0.3)] transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-xs font-bold uppercase tracking-widest">
+                    &copy; 2026 Infinity Ads. Decentralized Growth Protocol.
+                </p>
+                <div class="flex gap-8">
+                    <a href="/contact" class="text-gray-600 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em]">Contact</a>
+                    <a href="/privacy-policy" class="text-gray-600 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em]">Privacy Policy</a>
+                    <a href="/terms-conditions" class="text-gray-600 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em]">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu-btn');
+
+        btn.addEventListener('click', () => {
+            menu.classList.remove('translate-x-full');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            menu.classList.add('translate-x-full');
+        });
+
+        // Growth Calculator Logic
+        const spendSlider = document.getElementById('spend-slider');
+        const roasSlider = document.getElementById('roas-slider');
+        const spendVal = document.getElementById('spend-val');
+        const roasVal = document.getElementById('roas-val');
+        const calcRevenue = document.getElementById('calc-revenue');
+        const calcRoi = document.getElementById('calc-roi');
+
+        function updateGrowth() {
+            if (!spendSlider || !roasSlider) return;
+            const spend = parseInt(spendSlider.value);
+            const roas = parseFloat(roasSlider.value);
+            const revenue = spend * roas;
+
+            if (spendVal) spendVal.textContent = `$${spend.toLocaleString()}`;
+            if (roasVal) roasVal.textContent = `${roas.toFixed(1)}x`;
+            if (calcRevenue) calcRevenue.textContent = `$${revenue.toLocaleString()}`;
+            if (calcRoi) calcRoi.textContent = `${roas.toFixed(1)}x`;
+        }
+
+        if (spendSlider) spendSlider.addEventListener('input', updateGrowth);
+        if (roasSlider) roasSlider.addEventListener('input', updateGrowth);
+
+        // FAQ Interaction Logic
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.closest('.faq-item');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                const isOpen = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active', 'bg-brand-blue/10', 'border-brand-blue/30');
+                    otherItem.querySelector('.faq-content').style.display = 'none';
+                    otherItem.querySelector('span').classList.remove('text-brand-blue');
+                    otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    otherItem.querySelector('.faq-icon').classList.remove('bg-brand-blue', 'text-white');
+                });
+
+                // Toggle current item
+                if (!isOpen) {
+                    item.classList.add('active', 'bg-brand-blue/10', 'border-brand-blue/30');
+                    content.style.display = 'block';
+                    item.querySelector('span').classList.add('text-brand-blue');
+                    icon.style.transform = 'rotate(45deg)';
+                    icon.classList.add('bg-brand-blue', 'text-white');
+                }
+            });
+        });
+
+        // Initial call
+        updateGrowth();
+    </script>
+</body>
+
+</html> 
