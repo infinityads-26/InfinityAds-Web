@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# 1. Map /home to index.html
+RewriteRule ^home$ index.html [L]
+
+# 2. Redirect index.html to /home for consistency
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ /home [R=301,L]
+
+# 3. Remove .html extension from other pages
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# 4. Redirect .html requests to clean URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html\ HTTP/
+RewriteRule ^([^\ ]+)\.html$ /$1 [R=301,L]
