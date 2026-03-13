@@ -371,9 +371,8 @@
 
                 const formData = new FormData(contactForm);
 
-                // Form Submission Logic
-                const isLocal = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
-                const actionURL = isLocal ? "https://formspree.io/f/mnjblwzj" : "/contact/send-mail.php";
+                // Form Submission Logic (Using Formspree for Vercel/Static Compatibility)
+                const actionURL = "https://formspree.io/f/mnjblwzj";
 
                 try {
                     const response = await fetch(actionURL, {
